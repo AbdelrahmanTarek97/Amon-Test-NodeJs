@@ -1,7 +1,5 @@
 const { v4: uuid } = require('uuid');
 const { pick } = require('lodash');
-// For some unknown reason, circleCI complains from this require when it runs eslint, so i disabled it for only this line
-// eslint-disable-next-line node/no-missing-require
 const coinGecko = require('../../helpers/coingecko');
 
 module.exports = function (sequelize, DataTypes) {
