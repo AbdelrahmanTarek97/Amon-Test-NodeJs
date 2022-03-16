@@ -8,6 +8,10 @@ module.exports = {
         "name" VARCHAR(255),
         "code" VARCHAR(255)
       );
+
+      ALTER TABLE "Coin"
+      ADD COLUMN "price" int,
+      ADD COLUMN "dateOfLastPriceUpdate";
     `;
     await transaction.sequelize.query(sql, { raw: true, transaction });
   },

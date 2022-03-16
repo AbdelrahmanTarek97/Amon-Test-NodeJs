@@ -1,2 +1,2 @@
-const request = require('superagent');
+const request = require('axios');
 module.exports = request;

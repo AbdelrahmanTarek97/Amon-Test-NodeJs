@@ -3,7 +3,7 @@ const Moment = require('moment');
 const MomentRange = require('moment-range');
 const moment = MomentRange.extendMoment(Moment);
 const Decimal = require('decimal.js');
-const request = require('request-promise');
+const request = require('./request');
 const assert = require('assert');
 
 const Utils = {

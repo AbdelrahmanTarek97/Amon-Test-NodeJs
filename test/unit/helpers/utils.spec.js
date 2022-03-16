@@ -2,7 +2,8 @@ const path = require('path');
 const sinon = require('sinon');
 const moment = require('moment');
 const sequelizeMockingMocha = require('sequelize-mocking').sequelizeMockingMocha;
-const request = require('request-promise');
+const request = require(path.join(srcDir, '/helpers/request'));
+const { expect } = require('chai');
 
 const logger = require(path.join(srcDir, '/modules/logger'));
 const Utils = require(path.join(srcDir, '/helpers/utils'));
@@ -507,5 +508,13 @@ describe('Helpers: Utils', () => {
     const obj = { a: 1, child };
     child.obj = obj;
     expect(Utils.JSONStringifyCircular(obj)).to.be.eq('{\n  "a": 1,\n  "child": {}\n}');
+  });
+
+  it('Should make the thread wait', async () => {
+    let beforeTime = new Date().getTime();
+    await Utils.wait(100);
+    let afterTime = new Date().getTime();
+    let timeDifference = afterTime - beforeTime;
+    expect(timeDifference).to.be.greaterThanOrEqual(100);
   });
 });

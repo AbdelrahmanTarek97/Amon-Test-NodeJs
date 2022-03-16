@@ -68,6 +68,11 @@ const ERRORS = [
     description: 'Bad parameters',
   },
   {
+    code: 'duplicate_coin_code',
+    status: 400,
+    description: 'The coin you are trying to create already exists',
+  },
+  {
     code: 'access_denied',
     status: 401,
     description: 'You are trying to access to a forbidden resource',
@@ -86,6 +91,16 @@ const ERRORS = [
     code: 'unknown_coin_code',
     status: 404,
     description: 'Coin Code not found',
+  },
+  {
+    code: 'coin_not_found_on_coingecko',
+    status: 404,
+    description: 'Coin code not found on coingecko',
+  },
+  {
+    code: 'currency_not_found',
+    status: 404,
+    description: 'currency_not_found',
   },
   {
     code: 'entity_too_large',

@@ -6,7 +6,7 @@
     <working-directory>$PROJECT_DIR$</working-directory>
     <pass-parent-env>true</pass-parent-env>
     <ui>bdd</ui>
-    <extra-mocha-options>./test/test.config.js ./test/mockDb.js ./test/unit --recursive --timeout 90000</extra-mocha-options>
+    <extra-mocha-options>./test/test.config.js ./test/mockDb.js ./test/unit --recursive --timeout 15000</extra-mocha-options>
     <test-kind>DIRECTORY</test-kind>
     <test-directory>$PROJECT_DIR$/test/unit</test-directory>
     <recursive>true</recursive>
